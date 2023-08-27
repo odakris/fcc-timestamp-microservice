@@ -13,7 +13,7 @@ app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 2
 app.use(express.static("public"));
 
 // http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
 
@@ -21,11 +21,11 @@ app.get("/", function(req, res) {
 app.get("/:key?", (req, res, next) => {
   let key = req.params.key;
 
-  key === "api" 
-    ? next() 
+  key === "api"
+    ? next()
     : res.json({
-      "error 404": "please use correct route => [url]/api"
-    })
+        "error 404": "please use correct route => [url]/api",
+      });
 });
 
 app.get("/api/:date?", (req, res) => {
@@ -40,9 +40,9 @@ app.get("/api/:date?", (req, res) => {
   } else {
     isNumRegex.test(inputDate)
       ? // if input date is numerical (unix format)
-      (utcDate = new Date(parseInt(inputDate)))
+        (utcDate = new Date(parseInt(inputDate)))
       : // else input date is date format
-      (utcDate = new Date(inputDate));
+        (utcDate = new Date(inputDate));
   }
 
   // check for valid date or not
@@ -51,9 +51,7 @@ app.get("/api/:date?", (req, res) => {
     : res.json({ unix: utcDate.getTime(), utc: utcDate.toUTCString() });
 });
 
-
-
 // listen for requests
-const listener = app.listen(port, function() {
+const listener = app.listen(port, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });
