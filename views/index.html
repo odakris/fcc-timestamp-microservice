@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+  <head>
+    <title>Timestamp Microservice</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-   <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h3>Example Usage:</h3>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
-
-      <h3>Example Output:</h3>
+  <body class="flex">
+    <header class="titles">
+      <h1>Timestamp Microservice API</h1>
       <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+        This is an API that convert a given calendar date to it's timestamp.
       </p>
+      <hr />
+    </header>
+    <div class="container flex">
+      <h2>Example Usage</h2>
+      <h3>Get the current date</h3>
+      <p class="text">To get the data for the current date:</p>
+      <code>[your_url]/api</code>
+      <h3>Get other dates</h3>
+      <p class="text">
+        To get the data for a specific date, a date format (YYYY-MM-DD) is
+        needed, such as:
+      </p>
+      <code
+        >[your_url]/api/1992-01-13</code
+      >
+      <p class="text">Or a valid unix timestamp, such as:</p>
+      <code
+        >[your_url]/api/695309700000</code
+      >
+      <h2>Example Output</h2>
+      <code>{ 
+  unix: 695309700000,
+  utc: "Mon, 13 Jan 1992 13:35:00 GMT"
+}</code>
     </div>
     <div class="footer">
       <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+        Created by
+        <a href="https://github.com/odakris?tab=repositories" target="_blank"
+          >odakris</a
+        >
       </p>
     </div>
   </body>
