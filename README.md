@@ -14,7 +14,7 @@ This is the boilerplate code for the Timestamp Microservice project. Instruction
 This project is part of the **[freeCodeCamp](https://www.freecodecamp.org/learn/back-end-development-and-apis)** Back End Development and APIs projects certification.
 
 <p align="center">
-  <img src="./images/timestamp.png">
+  <img src="./public/images/timestamp.png">
 </p>
 
 ## Instructions
